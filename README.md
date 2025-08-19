@@ -31,8 +31,8 @@ kubectl apply -k clusters/local/bootstrap
 ```
 
 ## 📌 Versioning
-- Pinned Argo CD version: <fill in>
-- Current live version: <fill in from argocd version>
+- Pinned Argo CD version: **v2.14.6**
+- Current live version: **v2.14.6**
 
 ## 📝 Notes
 - See [docs/migration-notes.md](./docs/migration-notes.md) for details on differences between the current live setup and this Git-tracked configuration.

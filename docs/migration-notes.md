@@ -3,12 +3,12 @@
 ## Current State
 - Installed with: <describe how you installed originally (e.g., kubectl apply -f ... )>
 - Current version (from `argocd version`):  
-  - Client: vX.Y.Z  
-  - Server: vX.Y.Z
+  - Client: v2.14.11  
+  - Server: v2.14.6
 
 ## Target State
 - Managed via GitOps in this repository
-- Pinned Argo CD version: <version you vendored>
+- Pinned Argo CD version: v2.14.6
 - Bootstrap path: `clusters/local/bootstrap/`
 
 ## Differences Identified

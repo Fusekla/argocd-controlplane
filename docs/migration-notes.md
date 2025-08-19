@@ -30,5 +30,6 @@
 6. Enable automated sync + prune only when safe.
 
 ## Known Risks / TODOs
+
 - <list any concerns you see during diff>
 - <future work e.g., repo-creds secrets, AppSet introduction>

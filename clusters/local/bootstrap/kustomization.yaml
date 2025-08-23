@@ -4,7 +4,11 @@ namespace: argocd
 resources:
 - namespace.yaml
 - argocd-install/install-v3.1.0.yaml
-- ../config
+
+patchesStrategicMerge:
+  - ../config/argocd-cm.patch.yaml
+  - ../config/argocd-rbac-cm.patch.yaml
+
 labels:
 - includeSelectors: false
   pairs:

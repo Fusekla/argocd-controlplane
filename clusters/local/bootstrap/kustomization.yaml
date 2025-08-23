@@ -17,11 +17,13 @@ resources:
 patches:
   - path: patches/argocd-cm.patch.yaml
     target:
+      group: ""          # core API group
+      version: v1
       kind: ConfigMap
       name: argocd-cm
-      namespace: argocd
   - path: patches/argocd-rbac-cm.patch.yaml
     target:
+      group: ""
+      version: v1
       kind: ConfigMap
       name: argocd-rbac-cm
-      namespace: argocd

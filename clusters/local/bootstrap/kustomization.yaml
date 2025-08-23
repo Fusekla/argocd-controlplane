@@ -5,7 +5,7 @@ resources:
 - namespace.yaml
 - argocd-install/install-v3.1.0.yaml
 
-patchesStrategicMerge:
+patches:
   - ../config/argocd-cm.patch.yaml
   - ../config/argocd-rbac-cm.patch.yaml
 

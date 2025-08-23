@@ -25,7 +25,7 @@ docs/ # migration notes, references
 ```bash
 kustomize build clusters/local/bootstrap
 ```
-### Apply manifests (⚠️ not yet)
+### Apply manifests
 ```bash
 kubectl apply -k clusters/local/bootstrap
 ```

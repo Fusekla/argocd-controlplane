@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-rbac-cm
+  namespace: argocd
+data:
+  # Example: define a role with read-only on all apps
+  policy.csv: |
+    p, role:readonly, applications, get, *, allow
+    p, role:readonly, projects, get, *, allow
+    # map the local user to that role
+    g, mirolocal, role:readonly
+
+  # Default policy if no explicit grant matches
+  policy.default: role:readonly

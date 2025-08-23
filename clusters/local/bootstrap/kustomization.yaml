@@ -4,8 +4,8 @@ kind: Kustomization
 namespace: argocd
 
 resources:
-- namespace.yaml
-- argocd-install/install-v3.1.0.yaml
+  - namespace.yaml
+  - argocd-install/install-v3.1.0.yaml   # or your pinned version
 
 # keep your safe label behavior if you use labels transformer
 # labels:
@@ -15,13 +15,13 @@ resources:
 #     includeTemplates: true
 
 patches:
-- path: patches/argocd-cm.patch.yaml
-  target:
-    kind: ConfigMap
-    name: argocd-cm
-    namespace: argocd
-- path: patches/argocd-rbac-cm.patch.yaml
-  target:
-    kind: ConfigMap
-    name: argocd-rbac-cm
-    namespace: argocd
+  - path: patches/argocd-cm.patch.yaml
+    target:
+      kind: ConfigMap
+      name: argocd-cm
+      namespace: argocd
+  - path: patches/argocd-rbac-cm.patch.yaml
+    target:
+      kind: ConfigMap
+      name: argocd-rbac-cm
+      namespace: argocd

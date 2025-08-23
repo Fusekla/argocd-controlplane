@@ -1,15 +1,27 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
+
 namespace: argocd
+
 resources:
-- namespace.yaml
-- argocd-install/install-v3.1.0.yaml
+  - namespace.yaml
+  - argocd-install/install-v3.1.0.yaml   # or your pinned version
 
-patchesStrategicMerge:
-  - ../config/argocd-cm.patch.yaml
-  - ../config/argocd-rbac-cm.patch.yaml
+# keep your safe label behavior if you use labels transformer
+# labels:
+#   - pairs:
+#       app.kubernetes.io/managed-by: gitops
+#     includeSelectors: false
+#     includeTemplates: true
 
-labels:
-- includeSelectors: false
-  pairs:
-    app.kubernetes.io/managed-by: gitops
+patches:
+  - path: patches/argocd-cm.patch.yaml
+    target:
+      kind: ConfigMap
+      name: argocd-cm
+      namespace: argocd
+  - path: patches/argocd-rbac-cm.patch.yaml
+    target:
+      kind: ConfigMap
+      name: argocd-rbac-cm
+      namespace: argocd

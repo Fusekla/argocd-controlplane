@@ -3,8 +3,8 @@ kind: Kustomization
 namespace: argocd
 resources:
 - namespace.yaml
-- argocd-install/install-v2.14.6.yaml
+- argocd-install/install-3.1.0.yaml
 labels:
-- includeSelectors: true
+- includeSelectors: false
   pairs:
     app.kubernetes.io/managed-by: gitops

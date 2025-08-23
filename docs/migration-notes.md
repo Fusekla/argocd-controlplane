@@ -1,7 +1,7 @@
 # Migration Notes
 
 ## Current State
-- Installed with: <describe how you installed originally (e.g., kubectl apply -f ... )>
+- Installed with: `kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.14.6/manifests/install.yaml`
 - Current version (from `argocd version`):  
   - Client: v2.14.11  
   - Server: v2.14.6
@@ -31,5 +31,5 @@
 
 ## Known Risks / TODOs
 
-- <list any concerns you see during diff>
-- <future work e.g., repo-creds secrets, AppSet introduction>
+- Initial labels mutated selectors → immutable-field error
+  **Resolution** : Set `includeSelectors:` false (or removed labels) for bootstrap to avoid selector changes.

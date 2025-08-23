@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: argocd
 resources:
 - namespace.yaml
-- argocd-install/install-3.1.0.yaml
+- argocd-install/install-v3.1.0.yaml
 - ../config
 labels:
 - includeSelectors: false

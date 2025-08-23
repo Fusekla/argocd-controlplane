@@ -1,10 +1,7 @@
 # Migration Notes
 
 ## Current State
-- Installed with: `kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-cd/v2.14.6/manifests/install.yaml`
-- Current version (from `argocd version`):  
-  - Client: v2.14.11  
-  - Server: v2.14.6
+As `ArgoCD` was not running any apps, it was uninstalled and reinstall from scratch from this repository.
 
 ## Target State
 - Managed via GitOps in this repository

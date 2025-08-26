@@ -6,7 +6,7 @@ namespace: argocd
 resources:
   - namespace.yaml
   - argocd-install/install-v3.1.0.yaml   # or your pinned version
-  - ../platform-project.yaml
+  - platform-project.yaml
 
 # keep your safe label behavior if you use labels transformer
 # labels:

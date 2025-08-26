@@ -9,8 +9,7 @@ spec:
     repoURL: https://github.com/Fusekla/argocd-applications
     targetRevision: main
     path: clusters/local        # <— entrypoint in the apps repo
-    directory:
-      recurse: true
+    kustomize: {}     # optional; Argo will auto-detect kustomization.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd

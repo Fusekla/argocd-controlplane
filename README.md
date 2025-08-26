@@ -8,7 +8,7 @@ This repository contains the bootstrap manifests for deploying Argo CD into a cl
 
 ## 📂 Structure
 ```
-clusters/local/bootstrap/ # namespace + Argo CD install (vendored manifests) + patches
+clusters/local/bootstrap/ # namespace + Argo CD install (vendored manifests) + patches + AppProjects
 clusters/local/root/ # (future) root Application / App of Apps
 docs/ # migration notes, references
 ```
